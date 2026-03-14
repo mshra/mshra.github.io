@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "3.2.1",
+    "@tailwindcss/vite": "^4.2.1",
+    "astro": "^4.16.0",
+    "tailwindcss": "^4.2.1"
+  }
+}
