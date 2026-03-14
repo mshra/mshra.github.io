@@ -4,38 +4,26 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout
     title="Aaryan Mishra"
-    description="Software engineer based in San Francisco. Writing and more."
+    description="Software engineer based in Bengaluru. Writing and more."
 >
-    <section class="home">
-        <h1 class="page-heading">
-            <span class="name">Aaryan Mishra</span>
+    <section class="pt-16">
+        <h1 class="mb-6 text-3xl font-semibold tracking-tight text-[#111]">
+            Aaryan Mishra
         </h1>
 
-        <div class="bio">
-            <p>
+        <div class="max-w-[540px]">
+            <p class="text-[1.0625rem] leading-[1.8] text-[#333] mb-5">
                 I'm a software engineer based in Bengaluru. I build things for
                 the web, think about systems and design, and occasionally write
                 about what I learn along the way.
             </p>
-            <p>
-                You can find my <a href="/writing">writing here</a>.
+            <p class="text-[1.0625rem] leading-[1.8] text-[#333]">
+                You can find my <a
+                    href="/writing"
+                    class="text-[#111] underline underline-offset-[3px] decoration-[1px] decoration-[#ccc] transition-colors duration-150 hover:text-[#555] hover:decoration-[#555]"
+                    >writing here</a
+                >.
             </p>
         </div>
     </section>
 </BaseLayout>
-
-<style>
-    .home {
-        padding-top: 4rem;
-    }
-
-    .bio {
-        max-width: 540px;
-    }
-
-    .bio p {
-        font-size: 1.0625rem;
-        line-height: 1.8;
-        color: #333;
-    }
-</style>

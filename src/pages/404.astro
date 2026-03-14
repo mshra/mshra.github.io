@@ -4,42 +4,27 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
-<BaseLayout title="Lost?" description="This page does not exist.">
-    <section class="not-found">
-        <h1 class="page-heading">
-            <span class="name">Oops!</span>
+<BaseLayout
+    title="404 — Page Not Found"
+    description="This page does not exist."
+>
+    <section class="pt-16">
+        <h1 class="mb-8 text-4xl font-semibold tracking-tight text-[#111]">
+            404
         </h1>
 
-        <p class="message">
+        <p
+            class="mb-10 max-w-[480px] text-[1.0625rem] leading-relaxed text-[#555]"
+        >
             This page doesn't exist — it may have moved, been deleted, or never
             existed at all.
         </p>
 
-        <a href={`${base}/`} class="home-link">← Back to home</a>
+        <a
+            href={`${base}/`}
+            class="text-sm text-[#555] no-underline transition-colors duration-150 hover:text-[#111]"
+        >
+            ← Back to home
+        </a>
     </section>
 </BaseLayout>
-
-<style>
-    .not-found {
-        padding-top: 4rem;
-    }
-
-    .message {
-        color: #555;
-        font-size: 1.0625rem;
-        line-height: 1.8;
-        max-width: 480px;
-        margin-bottom: 2.5rem;
-    }
-
-    .home-link {
-        font-size: 0.9rem;
-        color: #555;
-        text-decoration: none;
-        transition: color 0.15s ease;
-    }
-
-    .home-link:hover {
-        color: #111;
-    }
-</style>

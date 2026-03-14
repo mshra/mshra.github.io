@@ -8,14 +8,14 @@ interface Props {
 
 const {
     title = "Aaryan Mishra",
-    description = "Softwae engineer. Writing and photos.",
+    description = "Software engineer. Writing and more.",
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="antialiased">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,193 +32,9 @@ const base = import.meta.env.BASE_URL;
             rel="stylesheet"
         />
     </head>
-    <body>
-        <main>
+    <body class="bg-white text-[#111] font-sans min-h-screen leading-relaxed">
+        <main class="max-w-[680px] mx-auto px-6 py-16 sm:py-10">
             <slot />
         </main>
     </body>
 </html>
-
-<style is:global>
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    :root {
-        --color-text: #111111;
-        --color-muted: #aaaaaa;
-        --color-subtle: #666666;
-        --color-bg: #ffffff;
-        --color-link: #111111;
-        --color-link-hover: #555555;
-        --color-border: #e5e5e5;
-        --max-width: 680px;
-        --font-sans:
-            "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-            sans-serif;
-    }
-
-    html {
-        font-size: 16px;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-
-    body {
-        font-family: var(--font-sans);
-        background-color: var(--color-bg);
-        color: var(--color-text);
-        line-height: 1.7;
-        min-height: 100vh;
-    }
-
-    main {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 4rem 1.5rem 6rem;
-    }
-
-    /* ── Typography ── */
-
-    h1,
-    h2,
-    h3,
-    h4 {
-        line-height: 1.25;
-        font-weight: 600;
-        letter-spacing: -0.02em;
-    }
-
-    h1 {
-        font-size: clamp(1.75rem, 5vw, 2.25rem);
-        margin-bottom: 1.5rem;
-    }
-
-    h2 {
-        font-size: 1.25rem;
-        margin-top: 2.5rem;
-        margin-bottom: 0.75rem;
-    }
-
-    h3 {
-        font-size: 1.05rem;
-        margin-top: 2rem;
-        margin-bottom: 0.5rem;
-    }
-
-    p {
-        margin-bottom: 1.25rem;
-        color: var(--color-text);
-    }
-
-    p:last-child {
-        margin-bottom: 0;
-    }
-
-    ul,
-    ol {
-        padding-left: 1.5rem;
-        margin-bottom: 1.25rem;
-    }
-
-    li {
-        margin-bottom: 0.4rem;
-    }
-
-    strong,
-    b {
-        font-weight: 600;
-    }
-
-    em,
-    i {
-        font-style: italic;
-    }
-
-    blockquote {
-        border-left: 3px solid var(--color-border);
-        padding-left: 1.25rem;
-        color: var(--color-subtle);
-        margin: 1.75rem 0;
-        font-style: italic;
-    }
-
-    code {
-        font-family:
-            "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-        font-size: 0.875em;
-        background: #f4f4f4;
-        padding: 0.15em 0.4em;
-        border-radius: 3px;
-    }
-
-    pre {
-        background: #f4f4f4;
-        padding: 1.25rem;
-        border-radius: 6px;
-        overflow-x: auto;
-        margin-bottom: 1.25rem;
-    }
-
-    pre code {
-        background: none;
-        padding: 0;
-        font-size: 0.875rem;
-    }
-
-    hr {
-        border: none;
-        border-top: 1px solid var(--color-border);
-        margin: 2.5rem 0;
-    }
-
-    /* ── Links ── */
-
-    a {
-        color: var(--color-link);
-        text-decoration: underline;
-        text-underline-offset: 3px;
-        text-decoration-thickness: 1px;
-        text-decoration-color: #ccc;
-        transition:
-            color 0.15s ease,
-            text-decoration-color 0.15s ease;
-    }
-
-    a:hover {
-        color: var(--color-link-hover);
-        text-decoration-color: var(--color-link-hover);
-    }
-
-    /* ── Page heading with # prefix ── */
-
-    .page-heading {
-        margin-bottom: 2rem;
-    }
-
-    .page-heading .name {
-        color: var(--color-text);
-    }
-
-    /* ── Utilities ── */
-
-    .text-muted {
-        color: var(--color-subtle);
-    }
-
-    .text-small {
-        font-size: 0.875rem;
-    }
-
-    /* ── Responsive ── */
-
-    @media (max-width: 640px) {
-        main {
-            padding: 2.5rem 1.25rem 4rem;
-        }
-    }
-</style>

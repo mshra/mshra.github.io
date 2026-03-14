@@ -18,30 +18,31 @@ function formatDate(date: Date): string {
 ---
 
 <BaseLayout
-    title="Writing — Aaryan Arora"
-    description="Essays and notes by Aaryan Arora."
+    title="Writing — Aaryan Mishra"
+    description="Essays and notes by Aaryan Mishra."
 >
-    <!-- <h1 class="page-heading">
-        <span class="name">writing</span>
-    </h1> -->
-
-    <p class="intro">
+    <p class="text-sm text-[#555] mb-12">
         A collection of essays, notes, and half-formed thoughts. Published when
         ready, updated when wrong.
     </p>
 
-    <ul class="post-list">
+    <ul class="list-none p-0 m-0 flex flex-col">
         {
             posts.map((post) => (
-                <li class="post-item">
-                    <a href={`${base}/writing/${post.slug}`} class="post-title">
+                <li class="py-6 border-b border-[#e5e5e5] first:border-t flex flex-col gap-1.5">
+                    <a
+                        href={`${base}/writing/${post.slug}`}
+                        class="text-base font-medium text-[#111] no-underline tracking-tight transition-colors duration-150 hover:text-[#555]"
+                    >
                         {post.data.title}
                     </a>
                     {post.data.description && (
-                        <p class="post-description">{post.data.description}</p>
+                        <p class="text-sm text-[#666] m-0 leading-relaxed">
+                            {post.data.description}
+                        </p>
                     )}
                     <time
-                        class="post-date"
+                        class="text-[0.8125rem] text-[#aaa] tabular-nums"
                         datetime={post.data.date.toISOString()}
                     >
                         {formatDate(post.data.date)}
@@ -51,80 +52,12 @@ function formatDate(date: Date): string {
         }
     </ul>
 
-    <footer class="page-footer">
-        <a href={`${base}/`} class="back-link">← Back to home</a>
+    <footer class="mt-16 pt-8 border-t border-[#e5e5e5]">
+        <a
+            href={`${base}/`}
+            class="text-sm text-[#555] no-underline transition-colors duration-150 hover:text-[#111]"
+        >
+            ← Back to home
+        </a>
     </footer>
 </BaseLayout>
-
-<style>
-    .intro {
-        color: #555;
-        margin-bottom: 3rem;
-        font-size: 0.95rem;
-    }
-
-    .post-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .post-item {
-        padding: 1.5rem 0;
-        border-bottom: 1px solid #e5e5e5;
-        display: flex;
-        flex-direction: column;
-        gap: 0.35rem;
-    }
-
-    .post-item:first-child {
-        border-top: 1px solid #e5e5e5;
-    }
-
-    .post-title {
-        font-size: 1rem;
-        font-weight: 500;
-        color: #111;
-        text-decoration: none;
-        letter-spacing: -0.01em;
-        transition: color 0.15s ease;
-    }
-
-    .post-title:hover {
-        color: #555;
-        text-decoration: none;
-    }
-
-    .post-description {
-        font-size: 0.875rem;
-        color: #666;
-        margin: 0;
-        line-height: 1.5;
-    }
-
-    .post-date {
-        font-size: 0.8125rem;
-        color: #aaa;
-        font-variant-numeric: tabular-nums;
-    }
-
-    .page-footer {
-        margin-top: 4rem;
-        padding-top: 2rem;
-        border-top: 1px solid #e5e5e5;
-    }
-
-    .back-link {
-        font-size: 0.9rem;
-        color: #555;
-        text-decoration: none;
-        transition: color 0.15s ease;
-    }
-
-    .back-link:hover {
-        color: #111;
-    }
-</style>
