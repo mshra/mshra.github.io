@@ -9,22 +9,22 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     description="This page does not exist."
 >
     <section class="pt-16">
-        <h1 class="mb-8 text-4xl font-semibold tracking-tight text-[#111]">
+        <h1
+            class="mb-8 font-serif text-4xl font-normal tracking-tight text-text"
+        >
             404
         </h1>
 
-        <p
-            class="mb-10 max-w-[480px] text-[1.0625rem] leading-relaxed text-[#555]"
-        >
+        <p class="mb-10 max-w-120 text-[1.0625rem] leading-relaxed text-[#555]">
             This page doesn't exist — it may have moved, been deleted, or never
             existed at all.
         </p>
 
         <a
             href={`${base}/`}
-            class="text-sm text-[#555] no-underline transition-colors duration-150 hover:text-[#111]"
+            class="font-mono text-xs text-[#888] no-underline not-italic tracking-wide transition-colors duration-150 hover:text-text"
         >
-            ← Back to home
+            ← back to home
         </a>
     </section>
 </BaseLayout>

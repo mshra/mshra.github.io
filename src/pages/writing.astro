@@ -21,28 +21,31 @@ function formatDate(date: Date): string {
     title="Writing — Aaryan Mishra"
     description="Essays and notes by Aaryan Mishra."
 >
-    <p class="text-sm text-[#555] mb-12">
-        A collection of essays, notes, and half-formed thoughts. Published when
-        ready, updated when wrong.
+    <h1 class="mb-10 font-serif text-4xl font-normal tracking-tight">
+        Writing
+    </h1>
+
+    <p class="mb-12 font-mono text-sm text-[#888]">
+        Essays, notes, and half-formed thoughts.
     </p>
 
     <ul class="list-none p-0 m-0 flex flex-col">
         {
             posts.map((post) => (
-                <li class="py-6 border-b border-[#e5e5e5] first:border-t flex flex-col gap-1.5">
+                <li class="py-6 border-b border-border first:border-t flex flex-col gap-2">
                     <a
                         href={`${base}/writing/${post.slug}`}
-                        class="text-base font-medium text-[#111] no-underline tracking-tight transition-colors duration-150 hover:text-[#555]"
+                        class="font-serif text-[1.125rem] not-italic no-underline font-normal text-text transition-colors duration-150 hover:text-[#555]"
                     >
                         {post.data.title}
                     </a>
                     {post.data.description && (
-                        <p class="text-sm text-[#666] m-0 leading-relaxed">
+                        <p class="text-sm text-[#555] m-0 leading-relaxed">
                             {post.data.description}
                         </p>
                     )}
                     <time
-                        class="text-[0.8125rem] text-[#aaa] tabular-nums"
+                        class="font-mono text-xs text-[#888] tabular-nums tracking-wide"
                         datetime={post.data.date.toISOString()}
                     >
                         {formatDate(post.data.date)}
@@ -52,12 +55,12 @@ function formatDate(date: Date): string {
         }
     </ul>
 
-    <footer class="mt-16 pt-8 border-t border-[#e5e5e5]">
+    <footer class="mt-16 pt-8">
         <a
             href={`${base}/`}
-            class="text-sm text-[#555] no-underline transition-colors duration-150 hover:text-[#111]"
+            class="font-mono text-xs text-[#888] no-underline not-italic tracking-wide transition-colors duration-150 hover:text-text"
         >
-            ← Back to home
+            ← home
         </a>
     </footer>
 </BaseLayout>
