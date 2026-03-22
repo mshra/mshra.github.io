@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<BaseLayout title="Demo — Aaryan Mishra" description="A short demo clip.">
+    <section class="pt-8">
+        <h1
+            class="mb-10 font-serif text-4xl font-normal tracking-tight text-text"
+        >
+            Demo
+        </h1>
+
+        <div class="max-w-2xl">
+            <video
+                class="w-full rounded-sm border border-border bg-text"
+                controls
+                playsinline
+                preload="metadata"
+            >
+                <source src={`${base}/clip.mp4`} type="video/mp4" />
+                <p class="font-mono text-sm text-[#888]">
+                    Your browser doesn't support HTML video.
+                    <a href={`${base}/clip.mp4`}>Download the clip</a> instead.
+                </p>
+            </video>
+        </div>
+
+        <footer class="mt-16 pt-8">
+            <a
+                href={`${base}/`}
+                class="font-mono text-xs text-[#888] no-underline not-italic tracking-wide transition-colors duration-150 hover:text-text"
+            >
+                ← home
+            </a>
+        </footer>
+    </section>
+</BaseLayout>
