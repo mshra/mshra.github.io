@@ -14,8 +14,7 @@ const features = [
 
 const specs = [
     { value: "<200ms", label: "End to end latency" },
-    { value: "On device", label: "No cloud required" },
-    { value: "0 bytes", label: "Data transmitted" },
+    { value: "On device", label: "Runs on edge" },
 ];
 ---
 
@@ -24,21 +23,15 @@ const specs = [
     description="On-device, real-time voice enhancement engine with sub-200ms latency."
 >
     <section class="pb-16">
-        <p class="text-sm uppercase tracking-widest text-muted mb-4">
-            Real-Time Voice Enhancement
-        </p>
         <h1
-            class="font-serif text-5xl sm:text-6xl font-normal tracking-tight text-text leading-[1.1] max-w-3xl mb-4"
+            class="text-center font-serif text-5xl sm:text-6xl font-normal tracking-tight text-text leading-[1.1] max-w-3xl mb-4"
         >
-            The clearest version of your voice, in real time.
+            Arctan Speech Enhancement
         </h1>
-        <p class="text-lg text-muted max-w-lg">
-            On-device speech enhancement. Sub-200ms latency. No cloud required.
-        </p>
     </section>
 
     <section class="pb-16">
-        <div class="grid gap-px bg-border sm:grid-cols-3">
+        <div class="grid gap-px bg-border sm:grid-cols-2 text-center">
             {
                 specs.map((spec) => (
                     <div class="bg-bg p-6">
@@ -50,6 +43,21 @@ const specs = [
                 ))
             }
         </div>
+    </section>
+
+    <section class="pb-16 max-w-2xl">
+        <h2
+            class="font-serif text-2xl font-normal tracking-tight text-text mb-4"
+        >
+            Problem
+        </h2>
+        <p class="text-base text-text leading-relaxed">
+            Voice enhancement tools either require cloud processing, which
+            introduces latency and privacy concerns, or they rely on generic
+            models that flatten the natural character of a person's voice.
+            Real-time enhancement with both quality and speed has been a hard
+            constraint, not a feature.
+        </p>
     </section>
 
     <section class="pb-16">
@@ -65,58 +73,55 @@ const specs = [
                 <h2
                     class="font-serif text-2xl font-normal tracking-tight text-text mb-3"
                 >
-                    The Interface
+                    User Interface
                 </h2>
                 <p class="text-sm text-muted leading-relaxed">
-                    Three sliders. Real-time feedback. Your voice, enhanced as
-                    you speak. No accounts, no cloud, no configuration.
+                    Runs an on device speech to speech model with gender
+                    detection that adjusts model and voice in real time.
                 </p>
             </div>
         </div>
     </section>
-
-    <section class="pb-16 max-w-2xl">
-        <h2
-            class="font-serif text-2xl font-normal tracking-tight text-text mb-4"
-        >
-            The Problem
-        </h2>
-        <p class="text-base text-text leading-relaxed">
-            Voice enhancement tools either require cloud processing, which
-            introduces latency and privacy concerns, or they rely on generic
-            models that flatten the natural character of a person's voice.
-            Real-time enhancement with both quality and speed has been a hard
-            constraint, not a feature.
-        </p>
-    </section>
-
     <section class="pb-16 max-w-xl">
         <h2
             class="font-serif text-2xl font-normal tracking-tight text-text mb-4"
         >
             Features
         </h2>
-        <ul class="space-y-2">
-            {
-                features.map((feature) => (
-                    <li class="flex items-center gap-3 text-base text-text">
-                        <span class="w-1.5 h-1.5 rounded-full bg-text shrink-0" />
-                        {feature}
-                    </li>
-                ))
-            }
-        </ul>
+        <div class="grid gap-x-8 sm:grid-cols-2">
+            <ul class="space-y-2">
+                {
+                    features.slice(0, 3).map((feature) => (
+                        <li class="flex items-center gap-3 text-base text-text">
+                            <span class="w-1.5 h-1.5 rounded-full bg-text shrink-0" />
+                            {feature}
+                        </li>
+                    ))
+                }
+            </ul>
+            <ul class="space-y-2">
+                {
+                    features.slice(3).map((feature) => (
+                        <li class="flex items-center gap-3 text-base text-text">
+                            <span class="w-1.5 h-1.5 rounded-full bg-text shrink-0" />
+                            {feature}
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
     </section>
 
     <section class="pb-16">
         <h2
             class="font-serif text-2xl font-normal tracking-tight text-text mb-4"
         >
-            Gender-Adaptive Models
+            Gender Detection
         </h2>
         <p class="text-sm text-muted max-w-xl mb-6 leading-relaxed">
             Arctan automatically detects vocal characteristics and routes your
-            voice to the optimal enhancement model.
+            voice to the optimal enhancement model according to your gender and
+            voice quality.
         </p>
         <div class="grid gap-4 sm:grid-cols-2">
             <div
@@ -128,7 +133,7 @@ const specs = [
                     class="w-full"
                 />
                 <div
-                    class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-text/80 to-transparent"
+                    class="absolute bottom-0 inset-x-0 p-3 bg-linear-to-t from-text/80 to-transparent"
                 >
                     <p class="text-xs font-medium text-white">
                         Male voice model
@@ -144,7 +149,7 @@ const specs = [
                     class="w-full"
                 />
                 <div
-                    class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-text/80 to-transparent"
+                    class="absolute bottom-0 inset-x-0 p-3 bg-linear-to-t from-text/80 to-transparent"
                 >
                     <p class="text-xs font-medium text-white">
                         Female voice model
@@ -195,11 +200,11 @@ const specs = [
             Hear the Difference
         </h2>
         <div class="grid gap-6 sm:grid-cols-2">
-            <div class="audio-card p-5 border border-border rounded-xl" data-audio="input">
-                <div class="flex items-center justify-between mb-3">
-                    <span class="text-sm font-medium text-text">Original</span>
-                    <span class="text-xs text-muted font-mono">raw input</span>
-                </div>
+            <div
+                class="audio-card p-5 border border-border rounded-xl"
+                data-audio="input"
+            >
+                <span class="text-sm font-medium text-text">Original</span>
                 <audio id="audio-input" class="w-full">
                     <source src={`${base}/demo/input.wav`} type="audio/wav" />
                 </audio>
@@ -207,28 +212,42 @@ const specs = [
                     id="play-input"
                     class="play-btn w-full mt-3 h-12 flex items-center justify-center gap-3 bg-text/5 hover:bg-text/10 rounded-lg transition-colors"
                 >
-                    <svg id="play-icon-input" class="w-5 h-5 text-text" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M8 5v14l11-7z"/>
+                    <svg
+                        id="play-icon-input"
+                        class="w-5 h-5 text-text"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path d="M8 5v14l11-7z"></path>
                     </svg>
-                    <svg id="pause-icon-input" class="w-5 h-5 text-text hidden" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                    <svg
+                        id="pause-icon-input"
+                        class="w-5 h-5 text-text hidden"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"></path>
                     </svg>
-                    <span id="label-input" class="text-sm font-medium text-text">Play</span>
+                    <span id="label-input" class="text-sm font-medium text-text"
+                        >Play</span
+                    >
                 </button>
                 <div class="waveform mt-3 h-12 flex items-center gap-0.5">
-                    {Array.from({ length: 40 }).map((_, i) => (
-                        <div
-                            class="waveform-bar w-1 bg-text/30 rounded-full transition-all duration-150"
-                            style={`height: ${20 + Math.sin(i * 0.5) * 15 + Math.random() * 10}%`}
-                        />
-                    ))}
+                    {
+                        Array.from({ length: 40 }).map((_, i) => (
+                            <div
+                                class="waveform-bar w-1 bg-text/30 rounded-full transition-all duration-150"
+                                style={`height: ${20 + Math.sin(i * 0.5) * 15 + Math.random() * 10}%`}
+                            />
+                        ))
+                    }
                 </div>
             </div>
-            <div class="audio-card p-5 border border-border rounded-xl bg-text text-bg" data-audio="output">
-                <div class="flex items-center justify-between mb-3">
-                    <span class="text-sm font-medium">Enhanced</span>
-                    <span class="text-xs font-mono opacity-60">arctan output</span>
-                </div>
+            <div
+                class="audio-card p-5 border border-border rounded-xl bg-text text-bg"
+                data-audio="output"
+            >
+                <span class="text-sm font-medium">Enhanced</span>
                 <audio id="audio-output" class="w-full">
                     <source src={`${base}/demo/output.wav`} type="audio/wav" />
                 </audio>
@@ -236,29 +255,47 @@ const specs = [
                     id="play-output"
                     class="play-btn w-full mt-3 h-12 flex items-center justify-center gap-3 bg-bg/10 hover:bg-bg/20 rounded-lg transition-colors"
                 >
-                    <svg id="play-icon-output" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M8 5v14l11-7z"/>
+                    <svg
+                        id="play-icon-output"
+                        class="w-5 h-5"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path d="M8 5v14l11-7z"></path>
                     </svg>
-                    <svg id="pause-icon-output" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                    <svg
+                        id="pause-icon-output"
+                        class="w-5 h-5 hidden"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"></path>
                     </svg>
-                    <span id="label-output" class="text-sm font-medium">Play</span>
+                    <span id="label-output" class="text-sm font-medium"
+                        >Play</span
+                    >
                 </button>
                 <div class="waveform mt-3 h-12 flex items-center gap-0.5">
-                    {Array.from({ length: 40 }).map((_, i) => (
-                        <div
-                            class="waveform-bar w-1 bg-bg/30 rounded-full transition-all duration-150"
-                            style={`height: ${20 + Math.sin(i * 0.5) * 15 + Math.random() * 10}%`}
-                        />
-                    ))}
+                    {
+                        Array.from({ length: 40 }).map((_, i) => (
+                            <div
+                                class="waveform-bar w-1 bg-bg/30 rounded-full transition-all duration-150"
+                                style={`height: ${20 + Math.sin(i * 0.5) * 15 + Math.random() * 10}%`}
+                            />
+                        ))
+                    }
                 </div>
             </div>
         </div>
     </section>
 
     <script>
-        const audioInput = document.getElementById("audio-input") as HTMLAudioElement;
-        const audioOutput = document.getElementById("audio-output") as HTMLAudioElement;
+        const audioInput = document.getElementById(
+            "audio-input",
+        ) as HTMLAudioElement;
+        const audioOutput = document.getElementById(
+            "audio-output",
+        ) as HTMLAudioElement;
         const playInputBtn = document.getElementById("play-input");
         const playOutputBtn = document.getElementById("play-output");
 
@@ -266,8 +303,10 @@ const specs = [
             const bars = card.querySelectorAll(".waveform-bar");
             bars.forEach((bar) => {
                 if (animate) {
-                    (bar as HTMLElement).style.animation = "wave 0.8s ease-in-out infinite";
-                    (bar as HTMLElement).style.animationDelay = `${Math.random() * 0.3}s`;
+                    (bar as HTMLElement).style.animation =
+                        "wave 0.8s ease-in-out infinite";
+                    (bar as HTMLElement).style.animationDelay =
+                        `${Math.random() * 0.3}s`;
                 } else {
                     (bar as HTMLElement).style.animation = "none";
                 }
@@ -280,7 +319,7 @@ const specs = [
             playIcon: HTMLElement,
             pauseIcon: HTMLElement,
             label: HTMLElement,
-            card: HTMLElement
+            card: HTMLElement,
         ) {
             btn.addEventListener("click", () => {
                 if (audio.paused) {
@@ -319,7 +358,7 @@ const specs = [
             document.getElementById("play-icon-input")!,
             document.getElementById("pause-icon-input")!,
             document.getElementById("label-input")!,
-            inputCard
+            inputCard,
         );
 
         setupAudioControls(
@@ -328,7 +367,7 @@ const specs = [
             document.getElementById("play-icon-output")!,
             document.getElementById("pause-icon-output")!,
             document.getElementById("label-output")!,
-            outputCard
+            outputCard,
         );
     </script>
 
