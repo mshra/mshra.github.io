@@ -2,38 +2,229 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const features = [
+    "Pitch Stabilization",
+    "Timbre Enhancement",
+    "Clarity and Presence",
+    "Noise Cancellation",
+    "On-Device Processing",
+    "Gender-Adaptive Models",
+];
+
+const specs = [
+    { value: "<200ms", label: "End to end latency" },
+    { value: "On device", label: "No cloud required" },
+    { value: "0 bytes", label: "Data transmitted" },
+];
 ---
 
-<BaseLayout title="Demo — Aaryan Mishra" description="A short demo clip.">
-    <section class="pt-8">
+<BaseLayout
+    title="Arctan — Real-Time Voice Enhancement"
+    description="On-device, real-time voice enhancement engine with sub-200ms latency."
+>
+    <section class="pb-16">
+        <p class="text-sm uppercase tracking-widest text-muted mb-4">
+            Real-Time Voice Enhancement
+        </p>
         <h1
-            class="mb-10 font-serif text-4xl font-normal tracking-tight text-text"
+            class="font-serif text-5xl sm:text-6xl font-normal tracking-tight text-text leading-[1.1] max-w-3xl mb-4"
         >
-            Demo
+            The clearest version of your voice, in real time.
         </h1>
-
-        <div class="max-w-2xl">
-            <video
-                class="w-full rounded-sm border border-border bg-text"
-                controls
-                playsinline
-                preload="metadata"
-            >
-                <source src={`${base}/clip.mp4`} type="video/mp4" />
-                <p class="font-mono text-sm text-[#888]">
-                    Your browser doesn't support HTML video.
-                    <a href={`${base}/clip.mp4`}>Download the clip</a> instead.
-                </p>
-            </video>
-        </div>
-
-        <footer class="mt-16 pt-8">
-            <a
-                href={`${base}/`}
-                class="font-mono text-xs text-[#888] no-underline not-italic tracking-wide transition-colors duration-150 hover:text-text"
-            >
-                ← home
-            </a>
-        </footer>
+        <p class="text-lg text-muted max-w-lg">
+            On-device speech enhancement. Sub-200ms latency. No cloud required.
+        </p>
     </section>
+
+    <section class="pb-16">
+        <div class="grid gap-px bg-border sm:grid-cols-3">
+            {
+                specs.map((spec) => (
+                    <div class="bg-bg p-6">
+                        <p class="font-serif text-3xl font-normal tracking-tight text-text mb-1">
+                            {spec.value}
+                        </p>
+                        <p class="text-xs text-muted">{spec.label}</p>
+                    </div>
+                ))
+            }
+        </div>
+    </section>
+
+    <section class="pb-16">
+        <div class="grid gap-8 lg:grid-cols-2 items-center">
+            <div class="rounded-lg overflow-hidden border border-border">
+                <img
+                    src={`${base}/demo/home-page.png`}
+                    alt="Arctan application interface"
+                    class="w-full"
+                />
+            </div>
+            <div>
+                <h2
+                    class="font-serif text-2xl font-normal tracking-tight text-text mb-3"
+                >
+                    The Interface
+                </h2>
+                <p class="text-sm text-muted leading-relaxed">
+                    Three sliders. Real-time feedback. Your voice, enhanced as
+                    you speak. No accounts, no cloud, no configuration.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-16 max-w-2xl">
+        <h2
+            class="font-serif text-2xl font-normal tracking-tight text-text mb-4"
+        >
+            The Problem
+        </h2>
+        <p class="text-base text-text leading-relaxed">
+            Voice enhancement tools either require cloud processing, which
+            introduces latency and privacy concerns, or they rely on generic
+            models that flatten the natural character of a person's voice.
+            Real-time enhancement with both quality and speed has been a hard
+            constraint, not a feature.
+        </p>
+    </section>
+
+    <section class="pb-16 max-w-xl">
+        <h2
+            class="font-serif text-2xl font-normal tracking-tight text-text mb-4"
+        >
+            Features
+        </h2>
+        <ul class="space-y-2">
+            {
+                features.map((feature) => (
+                    <li class="flex items-center gap-3 text-base text-text">
+                        <span class="w-1.5 h-1.5 rounded-full bg-text shrink-0" />
+                        {feature}
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
+
+    <section class="pb-16">
+        <h2
+            class="font-serif text-2xl font-normal tracking-tight text-text mb-4"
+        >
+            Gender-Adaptive Models
+        </h2>
+        <p class="text-sm text-muted max-w-xl mb-6 leading-relaxed">
+            Arctan automatically detects vocal characteristics and routes your
+            voice to the optimal enhancement model.
+        </p>
+        <div class="grid gap-4 sm:grid-cols-2">
+            <div
+                class="relative overflow-hidden rounded-lg border border-border"
+            >
+                <img
+                    src={`${base}/demo/male.png`}
+                    alt="Male voice waveform processing"
+                    class="w-full"
+                />
+                <div
+                    class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-text/80 to-transparent"
+                >
+                    <p class="text-xs font-medium text-white">
+                        Male voice model
+                    </p>
+                </div>
+            </div>
+            <div
+                class="relative overflow-hidden rounded-lg border border-border"
+            >
+                <img
+                    src={`${base}/demo/female.png`}
+                    alt="Female voice waveform processing"
+                    class="w-full"
+                />
+                <div
+                    class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-text/80 to-transparent"
+                >
+                    <p class="text-xs font-medium text-white">
+                        Female voice model
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-16">
+        <div class="grid gap-8 lg:grid-cols-2 items-center">
+            <div>
+                <h2
+                    class="font-serif text-4xl font-normal tracking-tight text-text mb-2"
+                >
+                    &lt;200ms
+                </h2>
+                <p class="text-xs uppercase tracking-widest text-muted mb-4">
+                    Latency
+                </p>
+                <div class="space-y-3 text-sm text-muted leading-relaxed">
+                    <p>
+                        Latency is the constraint that makes everything else
+                        hard. At sub-200ms, changes in your voice reach the
+                        output before your brain registers the delay.
+                    </p>
+                    <p>
+                        Achieving this meant reworking the pipeline end-to-end,
+                        from how the audio buffer is managed to where in the
+                        chain the model runs.
+                    </p>
+                </div>
+            </div>
+            <div class="rounded-lg overflow-hidden border border-border">
+                <img
+                    src={`${base}/demo/latency.png`}
+                    alt="Latency metrics visualization"
+                    class="w-full max-w-md mx-auto"
+                />
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-16">
+        <h2
+            class="font-serif text-2xl font-normal tracking-tight text-text mb-4"
+        >
+            Hear the Difference
+        </h2>
+        <div class="max-w-lg space-y-2">
+            <div class="p-4 border border-border rounded-lg">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-medium text-text">Original</span>
+                    <span class="text-xs text-muted font-mono">raw input</span>
+                </div>
+                <audio controls class="w-full">
+                    <source src={`${base}/demo/input.wav`} type="audio/wav" />
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="p-4 border border-border rounded-lg bg-text text-bg">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-medium">Enhanced</span>
+                    <span class="text-xs font-mono opacity-60"
+                        >arctan output</span
+                    >
+                </div>
+                <audio
+                    controls
+                    class="w-full [&::-webkit-media-controls-current-time-display]:text-white [&::-webkit-media-controls-time-remaining-display]:text-white/60"
+                >
+                    <source src={`${base}/demo/output.wav`} type="audio/wav" />
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <footer
+        class="border-t border-border pt-6 pb-8 flex justify-between items-center"
+    >
+    </footer>
 </BaseLayout>
