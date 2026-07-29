@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="An on-device, real-time speech enhancement engine with sub-200ms latency."
+        />
+        <meta name="theme-color" content="#f7f5ef" />
+        <title>Speech Enhancement App — Aaryan Mishra</title>
+    </head>
+    <body>
+        <main class="case-study">
+            <a class="back-link" href="/">← Aaryan Mishra</a>
+
+            <header class="hero">
+                <p class="eyebrow">Arctan · Case study</p>
+                <h1>Speech Enhancement App</h1>
+                <p class="hero__lede">
+                    An on-device, real-time speech enhancement engine designed
+                    to make every call clearer—without slowing down the
+                    conversation.
+                </p>
+            </header>
+
+            <dl class="facts" aria-label="Project details">
+                <div>
+                    <dt>Latency</dt>
+                    <dd>&lt;200ms</dd>
+                </div>
+                <div>
+                    <dt>Runtime</dt>
+                    <dd>On device</dd>
+                </div>
+                <div>
+                    <dt>Technology</dt>
+                    <dd>Rust, ONNX</dd>
+                </div>
+            </dl>
+
+            <section class="section section--narrow" aria-labelledby="problem">
+                <p class="section__number" aria-hidden="true">01</p>
+                <div>
+                    <h2 id="problem">Problem</h2>
+                    <p>
+                        Contact centers and BPOs maintain dedicated quality
+                        assurance and speech-coaching teams to monitor calls and
+                        score agents on clarity, tone, and pace. The cost is
+                        significant, yet these teams can realistically review
+                        only a small fraction of the thousands of calls handled
+                        each day.
+                    </p>
+                    <p>
+                        Most interactions go unexamined, making the feedback loop
+                        slow—and the path to training a good call agent both slow
+                        and expensive.
+                    </p>
+                </div>
+            </section>
+
+            <section class="product-intro" aria-labelledby="approach">
+                <figure class="figure figure--portrait">
+                    <img
+                        src="/demo/app/assets/home-page.png"
+                        alt="Arctan application interface showing that voice enhancement is active"
+                        width="502"
+                        height="602"
+                    />
+                    <figcaption>Arctan running at the system level.</figcaption>
+                </figure>
+                <div class="product-intro__copy">
+                    <p class="section__number" aria-hidden="true">02</p>
+                    <h2 id="approach">This is where Arctan comes in.</h2>
+                    <p>
+                        Instead of waiting for feedback, Arctan enhances every
+                        agent’s voice as they speak, on every call, from day one.
+                        The speech-to-speech model operates at the system level,
+                        adjusting clarity, tone, and pace transparently.
+                    </p>
+                    <p>
+                        The customer hears the agent at their best—not the
+                        version that might emerge only after months of coaching.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section features" aria-labelledby="features">
+                <p class="section__number" aria-hidden="true">03</p>
+                <div>
+                    <h2 id="features">Features</h2>
+                    <ul class="feature-list">
+                        <li>Pitch stabilization</li>
+                        <li>Timbre enhancement</li>
+                        <li>Noise cancellation</li>
+                        <li>Gender adaptive</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section-block" aria-labelledby="adaptive">
+                <div class="section-block__heading">
+                    <p class="section__number" aria-hidden="true">04</p>
+                    <div>
+                        <h2 id="adaptive">Gender adaptive</h2>
+                        <p>
+                            Arctan detects vocal characteristics and routes each
+                            voice to the enhancement model best suited to its
+                            qualities.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="model-comparison">
+                    <figure class="figure">
+                        <img
+                            src="/demo/app/assets/male.png"
+                            alt="Arctan interface configured with a male voice model"
+                            width="502"
+                            height="602"
+                            loading="lazy"
+                        />
+                        <figcaption>Male voice model</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img
+                            src="/demo/app/assets/female.png"
+                            alt="Arctan interface configured with a female voice model"
+                            width="502"
+                            height="602"
+                            loading="lazy"
+                        />
+                        <figcaption>Female voice model</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="latency" aria-labelledby="latency">
+                <div class="latency__copy">
+                    <p class="section__number" aria-hidden="true">05</p>
+                    <h2 id="latency">&lt;200ms</h2>
+                    <p class="eyebrow">End-to-end latency</p>
+                    <p>
+                        Latency can make or break a conversation. Audio drops
+                        are often tolerable; delay is not. It causes people to
+                        speak over one another and turns natural pauses into
+                        frustrating gaps.
+                    </p>
+                    <p>
+                        Every part of the audio pipeline was therefore optimized
+                        to keep the conversation feeling immediate.
+                    </p>
+                </div>
+                <figure class="figure figure--latency">
+                    <img
+                        src="/demo/app/assets/latency.png"
+                        alt="Waveform visualization used to measure processing latency"
+                        width="223"
+                        height="271"
+                        loading="lazy"
+                    />
+                    <figcaption>Input and enhanced output timing.</figcaption>
+                </figure>
+            </section>
+
+            <section class="listening" aria-labelledby="listen">
+                <div class="section-block__heading">
+                    <p class="section__number" aria-hidden="true">06</p>
+                    <div>
+                        <h2 id="listen">Hear the difference</h2>
+                        <p>
+                            Listen to the source recording, then compare it with
+                            the enhanced output.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="audio-list">
+                    <div class="audio-sample">
+                        <div>
+                            <p class="audio-sample__name">Original</p>
+                            <p class="audio-sample__description">
+                                Unprocessed microphone input
+                            </p>
+                        </div>
+                        <audio id="audio-original" preload="metadata">
+                            <source
+                                src="/demo/app/assets/input.wav"
+                                type="audio/wav"
+                            />
+                        </audio>
+                        <button
+                            class="audio-control"
+                            type="button"
+                            data-audio="audio-original"
+                            aria-pressed="false"
+                        >
+                            <span class="audio-control__icon" aria-hidden="true"
+                                >▶</span
+                            >
+                            <span class="audio-control__label">Play</span>
+                        </button>
+                    </div>
+
+                    <div class="audio-sample">
+                        <div>
+                            <p class="audio-sample__name">Enhanced</p>
+                            <p class="audio-sample__description">
+                                Speech-to-speech model output
+                            </p>
+                        </div>
+                        <audio id="audio-enhanced" preload="metadata">
+                            <source
+                                src="/demo/app/assets/output.wav"
+                                type="audio/wav"
+                            />
+                        </audio>
+                        <button
+                            class="audio-control"
+                            type="button"
+                            data-audio="audio-enhanced"
+                            aria-pressed="false"
+                        >
+                            <span class="audio-control__icon" aria-hidden="true"
+                                >▶</span
+                            >
+                            <span class="audio-control__label">Play</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="case-study__footer">
+                <a href="/">← Back to home</a>
+                <p>Speech Enhancement App</p>
+            </footer>
+        </main>
+
+        <script type="module" src="/src/demo-app.ts"></script>
+    </body>
+</html>

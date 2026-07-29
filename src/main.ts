@@ -1,1 +1,2 @@
-// console.log("What you looking at bro ?");
+import "@fontsource-variable/newsreader/opsz.css";
+import "./style.css";
