@@ -25,42 +25,97 @@
             content="An on-device, real-time speech enhancement engine with sub-200ms latency."
         />
         <meta name="theme-color" content="#f7f5ef" />
-        <title>Speech Enhancement App — Aaryan Mishra</title>
+        <title>Speech Enhancement App</title>
     </head>
     <body>
-        <main class="case-study">
-            <a class="back-link" href="/">← Aaryan Mishra</a>
+        <main
+            class="mx-auto w-[min(100%,calc(47.5rem+2*clamp(1.5rem,6vw,5rem)))] px-[clamp(1.5rem,6vw,5rem)] pt-6 pb-8 min-[40.001rem]:pt-[clamp(1.5rem,4vw,3rem)]"
+        >
+            <a class="inline-block text-[0.95rem]" href="/">← Aaryan Mishra</a>
 
-            <header class="hero">
-                <p class="eyebrow">Arctan · Case study</p>
-                <h1>Speech Enhancement App</h1>
-                <p class="hero__lede">
+            <header
+                class="mt-16 mb-12 min-[40.001rem]:mt-[clamp(4rem,9vw,7rem)] min-[40.001rem]:mb-[clamp(3rem,7vw,5rem)]"
+            >
+                <h1
+                    class="mb-6 max-w-[10ch] text-[clamp(2.7rem,7vw,5.25rem)] leading-[0.94] font-[540] tracking-[-0.045em] min-[40.001rem]:max-w-[12ch] [font-variation-settings:'opsz'_96]"
+                >
+                    On Device App
+                </h1>
+                <p
+                    class="mb-0 max-w-136 text-[1.125rem] leading-[1.4] text-muted [font-variation-settings:'opsz'_20]"
+                >
                     An on-device, real-time speech enhancement engine designed
                     to make every call clearer—without slowing down the
                     conversation.
                 </p>
             </header>
 
-            <dl class="facts" aria-label="Project details">
-                <div>
-                    <dt>Latency</dt>
-                    <dd>&lt;200ms</dd>
+            <dl
+                class="mb-16 grid grid-cols-1 border-y border-rule min-[40.001rem]:mb-[clamp(4rem,9vw,7rem)] min-[40.001rem]:grid-cols-3"
+                aria-label="Project details"
+            >
+                <div class="py-5">
+                    <dt
+                        class="mb-[0.3rem] text-[0.78rem] tracking-[0.07em] text-muted uppercase"
+                    >
+                        Latency
+                    </dt>
+                    <dd
+                        class="m-0 text-[clamp(1.2rem,2vw,1.5rem)] leading-none [font-variation-settings:'opsz'_32]"
+                    >
+                        &lt;200ms
+                    </dd>
                 </div>
-                <div>
-                    <dt>Runtime</dt>
-                    <dd>On device</dd>
+                <div
+                    class="border-t border-rule py-5 min-[40.001rem]:border-t-0 min-[40.001rem]:border-l min-[40.001rem]:pl-6"
+                >
+                    <dt
+                        class="mb-[0.3rem] text-[0.78rem] tracking-[0.07em] text-muted uppercase"
+                    >
+                        Runtime
+                    </dt>
+                    <dd
+                        class="m-0 text-[clamp(1.2rem,2vw,1.5rem)] leading-none [font-variation-settings:'opsz'_32]"
+                    >
+                        On device
+                    </dd>
                 </div>
-                <div>
-                    <dt>Technology</dt>
-                    <dd>Rust, ONNX</dd>
+                <div
+                    class="border-t border-rule py-5 min-[40.001rem]:border-t-0 min-[40.001rem]:border-l min-[40.001rem]:pl-6"
+                >
+                    <dt
+                        class="mb-[0.3rem] text-[0.78rem] tracking-[0.07em] text-muted uppercase"
+                    >
+                        Technology
+                    </dt>
+                    <dd
+                        class="m-0 text-[clamp(1.2rem,2vw,1.5rem)] leading-none [font-variation-settings:'opsz'_32]"
+                    >
+                        Rust, ONNX
+                    </dd>
                 </div>
             </dl>
 
-            <section class="section section--narrow" aria-labelledby="problem">
-                <p class="section__number" aria-hidden="true">01</p>
-                <div>
-                    <h2 id="problem">Problem</h2>
-                    <p>
+            <section
+                class="mb-[clamp(4rem,10vw,7.5rem)] grid grid-cols-1 gap-4 min-[40.001rem]:grid-cols-[3.5rem_minmax(0,1fr)] min-[40.001rem]:gap-6"
+                aria-labelledby="problem"
+            >
+                <p
+                    class="m-0 text-[0.78rem] leading-[1.2] tracking-[0.09em] text-muted uppercase [font-variation-settings:'opsz'_16]"
+                    aria-hidden="true"
+                >
+                    01
+                </p>
+                <div class="max-w-[37rem]">
+                    <h2
+                        id="problem"
+                        class="mb-3 text-[clamp(1.75rem,3.5vw,2.5rem)] leading-[1.05] font-[520] tracking-[-0.03em] [font-variation-settings:'opsz'_54]"
+                    >
+                        Problem
+                    </h2>
+                    <p
+                        class="mb-3 text-[1.05rem] leading-[1.45] text-muted [font-variation-settings:'opsz'_20]"
+                    >
                         Contact centers and BPOs maintain dedicated quality
                         assurance and speech-coaching teams to monitor calls and
                         score agents on clarity, tone, and pace. The cost is
@@ -68,59 +123,131 @@
                         only a small fraction of the thousands of calls handled
                         each day.
                     </p>
-                    <p>
-                        Most interactions go unexamined, making the feedback loop
-                        slow—and the path to training a good call agent both slow
-                        and expensive.
+                    <p
+                        class="mb-0 text-[1.05rem] leading-[1.45] text-muted [font-variation-settings:'opsz'_20]"
+                    >
+                        Most interactions go unexamined, making the feedback
+                        loop slow—and the path to training a good call agent
+                        both slow and expensive.
                     </p>
                 </div>
             </section>
 
-            <section class="product-intro" aria-labelledby="approach">
-                <figure class="figure figure--portrait">
+            <section
+                class="mb-[clamp(4rem,10vw,7.5rem)] grid grid-cols-1 items-center gap-[clamp(2rem,6vw,4rem)] min-[40.001rem]:grid-cols-[minmax(0,0.82fr)_minmax(0,1fr)]"
+                aria-labelledby="approach"
+            >
+                <figure class="m-0">
                     <img
+                        class="block h-auto w-full border border-rule"
                         src="/demo/app/assets/home-page.png"
                         alt="Arctan application interface showing that voice enhancement is active"
                         width="502"
                         height="602"
                     />
-                    <figcaption>Arctan running at the system level.</figcaption>
+                    <figcaption
+                        class="mt-[0.65rem] text-[0.8rem] leading-[1.3] text-muted italic"
+                    >
+                        Arctan running at the system level.
+                    </figcaption>
                 </figure>
-                <div class="product-intro__copy">
-                    <p class="section__number" aria-hidden="true">02</p>
-                    <h2 id="approach">This is where Arctan comes in.</h2>
-                    <p>
-                        Instead of waiting for feedback, Arctan enhances every
-                        agent’s voice as they speak, on every call, from day one.
-                        The speech-to-speech model operates at the system level,
-                        adjusting clarity, tone, and pace transparently.
+                <div class="order-first min-[40.001rem]:order-none">
+                    <p
+                        class="mb-3 text-[0.78rem] leading-[1.2] tracking-[0.09em] text-muted uppercase [font-variation-settings:'opsz'_16]"
+                        aria-hidden="true"
+                    >
+                        02
                     </p>
-                    <p>
+                    <h2
+                        id="approach"
+                        class="mb-3 text-[clamp(1.75rem,3.5vw,2.5rem)] leading-[1.05] font-[520] tracking-[-0.03em] [font-variation-settings:'opsz'_54]"
+                    >
+                        This is where Arctan comes in.
+                    </h2>
+                    <p
+                        class="mb-3 text-[1.05rem] leading-[1.45] text-muted [font-variation-settings:'opsz'_20]"
+                    >
+                        Instead of waiting for feedback, Arctan enhances every
+                        agent’s voice as they speak, on every call, from day
+                        one. The speech-to-speech model operates at the system
+                        level, adjusting clarity, tone, and pace transparently.
+                    </p>
+                    <p
+                        class="mb-0 text-[1.05rem] leading-[1.45] text-muted [font-variation-settings:'opsz'_20]"
+                    >
                         The customer hears the agent at their best—not the
                         version that might emerge only after months of coaching.
                     </p>
                 </div>
             </section>
 
-            <section class="section features" aria-labelledby="features">
-                <p class="section__number" aria-hidden="true">03</p>
+            <section
+                class="mb-[clamp(4rem,10vw,7.5rem)] grid grid-cols-1 gap-4 min-[40.001rem]:grid-cols-[3.5rem_minmax(0,1fr)] min-[40.001rem]:gap-6"
+                aria-labelledby="features"
+            >
+                <p
+                    class="m-0 text-[0.78rem] leading-[1.2] tracking-[0.09em] text-muted uppercase [font-variation-settings:'opsz'_16]"
+                    aria-hidden="true"
+                >
+                    03
+                </p>
                 <div>
-                    <h2 id="features">Features</h2>
-                    <ul class="feature-list">
-                        <li>Pitch stabilization</li>
-                        <li>Timbre enhancement</li>
-                        <li>Noise cancellation</li>
-                        <li>Gender adaptive</li>
+                    <h2
+                        id="features"
+                        class="mb-3 text-[clamp(1.75rem,3.5vw,2.5rem)] leading-[1.05] font-[520] tracking-[-0.03em] [font-variation-settings:'opsz'_54]"
+                    >
+                        Features
+                    </h2>
+                    <ul
+                        class="mt-6 grid max-w-[35rem] list-none grid-cols-1 border-t border-rule p-0 min-[40.001rem]:grid-cols-2"
+                    >
+                        <li
+                            class="border-b border-rule py-[0.95rem] text-[1.05rem] min-[40.001rem]:pr-6"
+                        >
+                            Pitch stabilization
+                        </li>
+                        <li
+                            class="border-b border-rule py-[0.95rem] text-[1.05rem] min-[40.001rem]:border-l min-[40.001rem]:pl-6"
+                        >
+                            Timbre enhancement
+                        </li>
+                        <li
+                            class="border-b border-rule py-[0.95rem] text-[1.05rem] min-[40.001rem]:pr-6"
+                        >
+                            Noise cancellation
+                        </li>
+                        <li
+                            class="border-b border-rule py-[0.95rem] text-[1.05rem] min-[40.001rem]:border-l min-[40.001rem]:pl-6"
+                        >
+                            Gender adaptive
+                        </li>
                     </ul>
                 </div>
             </section>
 
-            <section class="section-block" aria-labelledby="adaptive">
-                <div class="section-block__heading">
-                    <p class="section__number" aria-hidden="true">04</p>
-                    <div>
-                        <h2 id="adaptive">Gender adaptive</h2>
-                        <p>
+            <section
+                class="mb-[clamp(4rem,10vw,7.5rem)]"
+                aria-labelledby="adaptive"
+            >
+                <div
+                    class="mb-8 grid grid-cols-1 gap-4 min-[40.001rem]:grid-cols-[3.5rem_minmax(0,1fr)] min-[40.001rem]:gap-6"
+                >
+                    <p
+                        class="m-0 text-[0.78rem] leading-[1.2] tracking-[0.09em] text-muted uppercase [font-variation-settings:'opsz'_16]"
+                        aria-hidden="true"
+                    >
+                        04
+                    </p>
+                    <div class="max-w-[37rem]">
+                        <h2
+                            id="adaptive"
+                            class="mb-3 text-[clamp(1.75rem,3.5vw,2.5rem)] leading-[1.05] font-[520] tracking-[-0.03em] [font-variation-settings:'opsz'_54]"
+                        >
+                            Gender adaptive
+                        </h2>
+                        <p
+                            class="mb-0 text-[1.05rem] leading-[1.45] text-muted [font-variation-settings:'opsz'_20]"
+                        >
                             Arctan detects vocal characteristics and routes each
                             voice to the enhancement model best suited to its
                             qualities.
@@ -128,117 +255,188 @@
                     </div>
                 </div>
 
-                <div class="model-comparison">
-                    <figure class="figure">
+                <div
+                    class="grid grid-cols-1 gap-[clamp(1rem,3vw,2rem)] min-[40.001rem]:grid-cols-2"
+                >
+                    <figure class="m-0">
                         <img
+                            class="block h-auto w-full border border-rule"
                             src="/demo/app/assets/male.png"
                             alt="Arctan interface configured with a male voice model"
                             width="502"
                             height="602"
                             loading="lazy"
                         />
-                        <figcaption>Male voice model</figcaption>
+                        <figcaption
+                            class="mt-[0.65rem] text-[0.8rem] leading-[1.3] text-muted italic"
+                        >
+                            Male voice model
+                        </figcaption>
                     </figure>
-                    <figure class="figure">
+                    <figure class="m-0">
                         <img
+                            class="block h-auto w-full border border-rule"
                             src="/demo/app/assets/female.png"
                             alt="Arctan interface configured with a female voice model"
                             width="502"
                             height="602"
                             loading="lazy"
                         />
-                        <figcaption>Female voice model</figcaption>
+                        <figcaption
+                            class="mt-[0.65rem] text-[0.8rem] leading-[1.3] text-muted italic"
+                        >
+                            Female voice model
+                        </figcaption>
                     </figure>
                 </div>
             </section>
 
-            <section class="latency" aria-labelledby="latency">
-                <div class="latency__copy">
-                    <p class="section__number" aria-hidden="true">05</p>
-                    <h2 id="latency">&lt;200ms</h2>
-                    <p class="eyebrow">End-to-end latency</p>
-                    <p>
+            <section
+                class="mb-[clamp(4rem,10vw,7.5rem)] grid grid-cols-1 items-center gap-[clamp(2.5rem,6vw,4rem)] min-[40.001rem]:grid-cols-[minmax(0,1fr)_minmax(13rem,0.8fr)]"
+                aria-labelledby="latency"
+            >
+                <div>
+                    <p
+                        class="mb-3 text-[0.78rem] leading-[1.2] tracking-[0.09em] text-muted uppercase [font-variation-settings:'opsz'_16]"
+                        aria-hidden="true"
+                    >
+                        05
+                    </p>
+                    <h2
+                        id="latency"
+                        class="mb-2 text-[clamp(2.75rem,6vw,4.25rem)] leading-[1.05] font-[520] tracking-[-0.03em] [font-variation-settings:'opsz'_54]"
+                    >
+                        &lt;200ms
+                    </h2>
+                    <p
+                        class="mb-6 text-[0.78rem] leading-[1.2] tracking-[0.09em] text-muted uppercase [font-variation-settings:'opsz'_16]"
+                    >
+                        End-to-end latency
+                    </p>
+                    <p
+                        class="mb-3 text-[1.05rem] leading-[1.45] text-muted [font-variation-settings:'opsz'_20]"
+                    >
                         Latency can make or break a conversation. Audio drops
                         are often tolerable; delay is not. It causes people to
                         speak over one another and turns natural pauses into
                         frustrating gaps.
                     </p>
-                    <p>
+                    <p
+                        class="mb-0 text-[1.05rem] leading-[1.45] text-muted [font-variation-settings:'opsz'_20]"
+                    >
                         Every part of the audio pipeline was therefore optimized
                         to keep the conversation feeling immediate.
                     </p>
                 </div>
-                <figure class="figure figure--latency">
+                <figure class="m-0">
                     <img
+                        class="block h-auto w-full border border-rule"
                         src="/demo/app/assets/latency.png"
                         alt="Waveform visualization used to measure processing latency"
                         width="223"
                         height="271"
                         loading="lazy"
                     />
-                    <figcaption>Input and enhanced output timing.</figcaption>
+                    <figcaption
+                        class="mt-[0.65rem] text-[0.8rem] leading-[1.3] text-muted italic"
+                    >
+                        Input and enhanced output timing.
+                    </figcaption>
                 </figure>
             </section>
 
-            <section class="listening" aria-labelledby="listen">
-                <div class="section-block__heading">
-                    <p class="section__number" aria-hidden="true">06</p>
-                    <div>
-                        <h2 id="listen">Hear the difference</h2>
-                        <p>
+            <section
+                class="mb-[clamp(4rem,10vw,7.5rem)]"
+                aria-labelledby="listen"
+            >
+                <div
+                    class="mb-6 grid grid-cols-1 gap-4 min-[40.001rem]:grid-cols-[3.5rem_minmax(0,1fr)] min-[40.001rem]:gap-6"
+                >
+                    <p
+                        class="m-0 text-[0.78rem] leading-[1.2] tracking-[0.09em] text-muted uppercase [font-variation-settings:'opsz'_16]"
+                        aria-hidden="true"
+                    >
+                        06
+                    </p>
+                    <div class="max-w-[37rem]">
+                        <h2
+                            id="listen"
+                            class="mb-3 text-[clamp(1.75rem,3.5vw,2.5rem)] leading-[1.05] font-[520] tracking-[-0.03em] [font-variation-settings:'opsz'_54]"
+                        >
+                            Hear the difference
+                        </h2>
+                        <p
+                            class="mb-0 text-[1.05rem] leading-[1.45] text-muted [font-variation-settings:'opsz'_20]"
+                        >
                             Listen to the source recording, then compare it with
                             the enhanced output.
                         </p>
                     </div>
                 </div>
 
-                <div class="audio-list">
-                    <div class="audio-sample">
+                <div class="border-t border-rule">
+                    <div
+                        class="grid grid-cols-1 items-center gap-6 border-b border-rule py-4 min-[40.001rem]:grid-cols-[minmax(0,1fr)_auto]"
+                    >
                         <div>
-                            <p class="audio-sample__name">Original</p>
-                            <p class="audio-sample__description">
+                            <p class="mb-[0.2rem] text-xl">Original</p>
+                            <p class="mb-0 text-[0.9rem] text-muted">
                                 Unprocessed microphone input
                             </p>
                         </div>
-                        <audio id="audio-original" preload="metadata">
+                        <audio
+                            id="audio-original"
+                            class="hidden"
+                            preload="metadata"
+                        >
                             <source
                                 src="/demo/app/assets/input.wav"
                                 type="audio/wav"
                             />
                         </audio>
                         <button
-                            class="audio-control"
+                            class="audio-control inline-flex min-h-11 w-full min-w-[6.5rem] cursor-pointer items-center justify-center gap-[0.55rem] rounded-none border border-ink bg-ink px-4 py-[0.65rem] leading-none text-paper transition-colors duration-180 hover:bg-transparent hover:text-ink min-[40.001rem]:w-auto"
                             type="button"
                             data-audio="audio-original"
                             aria-pressed="false"
                         >
-                            <span class="audio-control__icon" aria-hidden="true"
+                            <span
+                                class="audio-control__icon min-w-3 font-serif text-[0.72rem]"
+                                aria-hidden="true"
                                 >▶</span
                             >
                             <span class="audio-control__label">Play</span>
                         </button>
                     </div>
 
-                    <div class="audio-sample">
+                    <div
+                        class="grid grid-cols-1 items-center gap-6 border-b border-rule py-4 min-[40.001rem]:grid-cols-[minmax(0,1fr)_auto]"
+                    >
                         <div>
-                            <p class="audio-sample__name">Enhanced</p>
-                            <p class="audio-sample__description">
+                            <p class="mb-[0.2rem] text-xl">Enhanced</p>
+                            <p class="mb-0 text-[0.9rem] text-muted">
                                 Speech-to-speech model output
                             </p>
                         </div>
-                        <audio id="audio-enhanced" preload="metadata">
+                        <audio
+                            id="audio-enhanced"
+                            class="hidden"
+                            preload="metadata"
+                        >
                             <source
                                 src="/demo/app/assets/output.wav"
                                 type="audio/wav"
                             />
                         </audio>
                         <button
-                            class="audio-control"
+                            class="audio-control inline-flex min-h-11 w-full min-w-[6.5rem] cursor-pointer items-center justify-center gap-[0.55rem] rounded-none border border-ink bg-ink px-4 py-[0.65rem] leading-none text-paper transition-colors duration-180 hover:bg-transparent hover:text-ink min-[40.001rem]:w-auto"
                             type="button"
                             data-audio="audio-enhanced"
                             aria-pressed="false"
                         >
-                            <span class="audio-control__icon" aria-hidden="true"
+                            <span
+                                class="audio-control__icon min-w-3 font-serif text-[0.72rem]"
+                                aria-hidden="true"
                                 >▶</span
                             >
                             <span class="audio-control__label">Play</span>
@@ -247,9 +445,13 @@
                 </div>
             </section>
 
-            <footer class="case-study__footer">
+            <footer
+                class="block border-t border-rule pt-[1.4rem] text-[0.9rem] text-muted min-[40.001rem]:flex min-[40.001rem]:justify-between min-[40.001rem]:gap-8"
+            >
                 <a href="/">← Back to home</a>
-                <p>Speech Enhancement App</p>
+                <p class="mt-3 mb-0 min-[40.001rem]:mt-0">
+                    Speech Enhancement App
+                </p>
             </footer>
         </main>
 
