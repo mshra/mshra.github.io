@@ -11,13 +11,13 @@ const normalizeDemoRoute = (server) => {
 
     const [pathname, query] = request.url.split("?");
 
-    if (pathname !== "/demo/app") {
+    if (pathname !== "/demo") {
       next();
       return;
     }
 
     response.statusCode = 302;
-    response.setHeader("Location", `/demo/app/${query ? `?${query}` : ""}`);
+    response.setHeader("Location", `/demo/${query ? `?${query}` : ""}`);
     response.end();
   });
 };
@@ -35,7 +35,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(import.meta.dirname, "index.html"),
-        demoApp: resolve(import.meta.dirname, "demo/app/index.html"),
+        demo: resolve(import.meta.dirname, "demo/index.html"),
       },
     },
   },
