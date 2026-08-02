@@ -11,6 +11,12 @@ const normalizeDemoRoute = (server) => {
 
     const [pathname, query] = request.url.split("?");
 
+    if (pathname === "/demo/") {
+      request.url = `/routes/demo/index.html${query ? `?${query}` : ""}`;
+      next();
+      return;
+    }
+
     if (pathname !== "/demo") {
       next();
       return;
@@ -35,7 +41,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(import.meta.dirname, "index.html"),
-        demo: resolve(import.meta.dirname, "demo/index.html"),
+        demo: resolve(import.meta.dirname, "routes/demo/index.html"),
       },
     },
   },
