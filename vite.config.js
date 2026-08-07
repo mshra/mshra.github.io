@@ -1,6 +1,41 @@
-import { resolve } from "node:path";
+import { copyFileSync, mkdirSync } from "node:fs";
+import { dirname, resolve } from "node:path";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
+
+const cleanRouteOutputs = [
+  {
+    source: "routes/speech-app/index.html",
+    destinations: ["speech-app/index.html", "demo/index.html"],
+  },
+  {
+    source: "routes/voice-isolation/index.html",
+    destinations: ["voice-isolation/index.html"],
+  },
+];
+
+const emitCleanRouteHtml = () => {
+  let outputDirectory;
+
+  return {
+    name: "emit-clean-route-html",
+    apply: "build",
+    configResolved(config) {
+      outputDirectory = resolve(config.root, config.build.outDir);
+    },
+    closeBundle() {
+      cleanRouteOutputs.forEach(({ source, destinations }) => {
+        const sourcePath = resolve(outputDirectory, source);
+
+        destinations.forEach((destination) => {
+          const destinationPath = resolve(outputDirectory, destination);
+          mkdirSync(dirname(destinationPath), { recursive: true });
+          copyFileSync(sourcePath, destinationPath);
+        });
+      });
+    },
+  };
+};
 
 const normalizeSpeechAppRoute = (server) => {
   server.middlewares.use((request, response, next) => {
@@ -41,6 +76,7 @@ const normalizeSpeechAppRoute = (server) => {
 export default defineConfig({
   plugins: [
     tailwindcss(),
+    emitCleanRouteHtml(),
     {
       name: "normalize-speech-app-route",
       configureServer: normalizeSpeechAppRoute,
