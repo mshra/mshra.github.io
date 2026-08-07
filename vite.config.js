@@ -11,13 +11,23 @@ const normalizeSpeechAppRoute = (server) => {
 
     const [pathname, query] = request.url.split("?");
 
+    if (pathname === "/voice-isolation/") {
+      request.url = `/routes/voice-isolation/index.html${query ? `?${query}` : ""}`;
+      next();
+      return;
+    }
+
     if (pathname === "/demo/" || pathname === "/speech-app/") {
       request.url = `/routes/speech-app/index.html${query ? `?${query}` : ""}`;
       next();
       return;
     }
 
-    if (pathname !== "/demo" && pathname !== "/speech-app") {
+    if (
+      pathname !== "/demo" &&
+      pathname !== "/speech-app" &&
+      pathname !== "/voice-isolation"
+    ) {
       next();
       return;
     }
@@ -42,6 +52,10 @@ export default defineConfig({
       input: {
         main: resolve(import.meta.dirname, "index.html"),
         speechApp: resolve(import.meta.dirname, "routes/speech-app/index.html"),
+        voiceIsolation: resolve(
+          import.meta.dirname,
+          "routes/voice-isolation/index.html",
+        ),
       },
     },
   },
