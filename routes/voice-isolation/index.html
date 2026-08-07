@@ -20,7 +20,7 @@
             href="/favicon-16x16.png"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Speech enhancement app" />
+        <meta name="description" content="Voice Isolation SDK" />
         <meta name="theme-color" content="#f7f5ef" />
         <title>Voice Isolation</title>
     </head>
@@ -35,40 +35,75 @@
                     <span>Home</span>
                 </a>
 
-                <h1 class="text-3xl font-bold">Speech Enhancement App</h1>
+                <h1 class="text-3xl font-bold">Eigen</h1>
 
-                <div>
-                    <b>Problem?</b>
+                <section aria-labelledby="problem" class="space-y-1">
+                    <h2 id="problem" class="font-bold">Problem?</h2>
                     <p>
-                        Contact centers maintain dedicated quality assurance and
-                        speech coaching teams to monitor calls and score agents
-                        on clarity and tone. Realistically only fraction of
-                        thousand calls are reviewed. Most interactions go
-                        unexamined, making the feedback loop slow and the path
-                        to training a good agent both slow and expensive. The
-                        worst part, the attrition rate is high! People leave and
-                        join everyday. So the whole process can just be a waste
-                        of time.
+                        Voice agents look good with clean test audio and break
+                        when real calls introduce street noise, side talk, and
+                        mumbles. Transcription errors rise, interruptions fire
+                        at the wrong time, and the rest of the agent works with
+                        the wrong context.
                     </p>
-                </div>
+                </section>
 
-                <div>
-                    <b>What can we do?</b>
+                <section aria-labelledby="build" class="space-y-1">
+                    <h2 id="build" class="font-bold">What did I build?</h2>
                     <p>
-                        We can automate QA but it doesn't solve anything, just
-                        increases the volume of actions and teams will be
-                        drowned with training requirements tailored for each
-                        agent.
+                        I helped ship
+                        <a
+                            href="https://www.arctan.ai/eigen"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-800 hover:underline"
+                            >Eigen</a
+                        >, a voice isolation model that runs in under 10 ms. I
+                        worked across the model runtime, developer platform and
+                        SDK layer so developers could add it to existing stack.
+                        The SDK is available for
+                        <a
+                            href="https://www.getarctan.com/help/for-voice-bots/eigen/python/standard-python/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-800 hover:underline"
+                            >direct Python audio processing</a
+                        >
+                        and common Voice AI integrations including Pipecat and
+                        Livekit.
                     </p>
-                </div>
+                </section>
 
-                <div>
-                    <b>Let's start!</b>
+                <!--<section aria-labelledby="constraints" class="space-y-1">
+                    <h2 id="constraints" class="font-bold">
+                        What made production difficult?
+                    </h2>
                     <p>
-                        We can divide the agents on basis of their target
-                        region. Agents who call international and the agents who
+                        Live audio does not arrive as a perfect model input.
+                        Sample rates, frame sizes, partial chunks, buffering,
+                        licensing, and processor lifecycle all have to remain
+                        predictable while the call continues. The integration
+                        layer had to handle those details without hiding errors
+                        from the developer.
                     </p>
-                </div>
+                </section>-->
+
+                <section aria-labelledby="results" class="space-y-1">
+                    <h2 id="results" class="font-bold">What changed?</h2>
+                    <p>
+                        Eigen now processes 100K+ minutes of audio every day and
+                        reduces word error rate by 57% on the industry leading
+                        ASRs. The benchmark evaluation were performed through
+                        custom fork of
+                        <a
+                            href="https://github.com/arctan-ai/open_asr_leaderboard"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-800 hover:underline"
+                            >Open ASR Leaderboard's methodology</a
+                        >.
+                    </p>
+                </section>
             </div>
         </main>
 

@@ -35,40 +35,136 @@
                     <span>Home</span>
                 </a>
 
-                <h1 class="text-3xl font-bold">Speech Enhancement App</h1>
+                <h1 class="text-3xl font-bold">
+                    Speech enhancement app for call centers
+                </h1>
 
-                <div>
-                    <b>Problem?</b>
+                <section aria-labelledby="problem" class="space-y-1">
+                    <h2 id="problem" class="font-bold">Problem?</h2>
                     <p>
                         Contact centers maintain dedicated quality assurance and
-                        speech coaching teams to monitor calls and score agents
-                        on clarity and tone. Realistically only fraction of
-                        thousand calls are reviewed. Most interactions go
-                        unexamined, making the feedback loop slow and the path
-                        to training a good agent both slow and expensive. The
-                        worst part, the attrition rate is high! People leave and
-                        join everyday. So the whole process can just be a waste
-                        of time.
+                        coaching teams, but only a fraction of their calls can
+                        be reviewed. Feedback arrives late, training is
+                        difficult to personalize, and high attrition forces
+                        teams to repeat the same work for every new batch of
+                        agents.
                     </p>
-                </div>
+                </section>
 
-                <div>
-                    <b>What can we do?</b>
+                <section aria-labelledby="why-local" class="space-y-1">
+                    <h2 id="why-local" class="font-bold">Why on device?</h2>
                     <p>
-                        We can automate QA but it doesn't solve anything, just
-                        increases the volume of actions and teams will be
-                        drowned with training requirements tailored for each
-                        agent.
+                        A cloud API would add another network dependency to a
+                        live call. Running the models locally kept processing
+                        close to the audio path and made the product easier to
+                        deploy inside existing call center setups where they
+                        also have different levels of network firewall
+                        restrictions depending on the process policy.
                     </p>
-                </div>
+                </section>
 
-                <div>
-                    <b>Let's start!</b>
+                <section aria-labelledby="build" class="space-y-1">
+                    <h2 id="build" class="font-bold">What did I build?</h2>
                     <p>
-                        We can divide the agents on basis of their target
-                        region. Agents who call international and the agents who
+                        I built a Tauri desktop application that packaged
+                        on-device voice models for live calls. The work joined
+                        model inference, audio routing, application releases,
+                        and software distribution into something teams could
+                        deploy without rebuilding their dialer.
                     </p>
-                </div>
+                </section>
+
+                <section aria-labelledby="results" class="space-y-1">
+                    <h2 id="results" class="font-bold">What changed?</h2>
+                    <p>
+                        The application reached 20+ BPOs and call centers and
+                        increased call conversion by 58%. More importantly, it
+                        moved the models out of a demo and into the environment
+                        where agents were already working.
+                    </p>
+                </section>
+
+                <section aria-labelledby="listen" class="space-y-3">
+                    <div class="space-y-1">
+                        <h2 id="listen" class="font-bold">
+                            Hear the difference
+                        </h2>
+                        <p>
+                            Listen to the microphone input, then compare it with
+                            the enhanced output.
+                        </p>
+                    </div>
+
+                    <div class="border-t border-rule">
+                        <div
+                            class="grid grid-cols-1 items-center gap-3 border-b border-rule py-3 sm:grid-cols-[minmax(0,1fr)_auto]"
+                        >
+                            <div>
+                                <p class="font-bold">Original</p>
+                                <p class="text-sm text-muted">
+                                    Unprocessed microphone input
+                                </p>
+                            </div>
+                            <audio
+                                id="audio-original"
+                                class="hidden"
+                                preload="metadata"
+                            >
+                                <source
+                                    src="/demo/assets/input.wav"
+                                    type="audio/wav"
+                                />
+                            </audio>
+                            <button
+                                class="audio-control inline-flex min-h-11 w-full cursor-pointer items-center justify-center gap-2 border border-ink bg-ink px-4 py-2 text-paper hover:bg-transparent hover:text-ink sm:w-auto"
+                                type="button"
+                                data-audio="audio-original"
+                                aria-pressed="false"
+                            >
+                                <span
+                                    class="audio-control__icon min-w-3 text-xs"
+                                    aria-hidden="true"
+                                    >▶</span
+                                >
+                                <span class="audio-control__label">Play</span>
+                            </button>
+                        </div>
+
+                        <div
+                            class="grid grid-cols-1 items-center gap-3 border-b border-rule py-3 sm:grid-cols-[minmax(0,1fr)_auto]"
+                        >
+                            <div>
+                                <p class="font-bold">Enhanced</p>
+                                <p class="text-sm text-muted">
+                                    Speech-to-speech model output
+                                </p>
+                            </div>
+                            <audio
+                                id="audio-enhanced"
+                                class="hidden"
+                                preload="metadata"
+                            >
+                                <source
+                                    src="/demo/assets/output.wav"
+                                    type="audio/wav"
+                                />
+                            </audio>
+                            <button
+                                class="audio-control inline-flex min-h-11 w-full cursor-pointer items-center justify-center gap-2 border border-ink bg-ink px-4 py-2 text-paper hover:bg-transparent hover:text-ink sm:w-auto"
+                                type="button"
+                                data-audio="audio-enhanced"
+                                aria-pressed="false"
+                            >
+                                <span
+                                    class="audio-control__icon min-w-3 text-xs"
+                                    aria-hidden="true"
+                                    >▶</span
+                                >
+                                <span class="audio-control__label">Play</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
 
