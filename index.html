@@ -38,11 +38,50 @@
     <body>
         <main class="flex min-h-svh flex-col justify-center gap-6 py-12">
             <div class="mx-auto w-full max-w-2xl space-y-4 px-6">
-                <!--<h1 class="text-2xl font-bold text-center">Aaryan Mishra</h1>-->
+                <header class="identity-bar">
+                    <h1 class="identity-name">Aaryan Mishra</h1>
+                    <div
+                        class="identity-context"
+                        aria-label="Current time and weather in Bangalore, India"
+                    >
+                        <time id="local-time" datetime="">--:-- --</time>
+                        <span class="identity-separator" aria-hidden="true"
+                            >·</span
+                        >
+                        <span class="location-label">
+                            <span>Bangalore</span>
+                            <!-- Flag of India via Wikimedia Commons. -->
+                            <img
+                                class="location-flag"
+                                src="/india-flag.svg"
+                                width="18"
+                                height="12"
+                                alt="India"
+                            />
+                        </span>
+                        <span class="identity-separator" aria-hidden="true"
+                            >·</span
+                        >
+                        <span
+                            id="local-weather"
+                            class="weather-reading"
+                            aria-live="polite"
+                        >
+                            <svg
+                                class="weather-icon"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path d="M4 12h16" />
+                                <path d="M7 16h10" />
+                                <path d="M9 20h6" />
+                            </svg>
+                            <span>--°C</span></span
+                        >
+                    </div>
+                </header>
 
                 <section aria-labelledby="about" class="max-w-2xl space-y-4">
-                    <h1 class="font-bold text-xl">Aaryan Mishra</h1>
-
                     <!--<p>
                         Software Engineer and
                         <a
