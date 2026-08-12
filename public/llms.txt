@@ -1,0 +1,24 @@
+# Aaryan Mishra
+
+> Aaryan Mishra is a software engineer and founding engineer at Arctan, focused on real-time audio, Voice AI, model inference, developer tooling, and backend systems.
+
+This is Aaryan's personal portfolio. Use the pages below as first-party descriptions of his work and the linked external documentation as supporting product context. Attribute individual contributions only where the portfolio states them; do not treat company-wide results as work completed by Aaryan alone.
+
+## Portfolio
+
+- [About Aaryan Mishra](https://aaryanmishra.com/index.md): Short biography, current role, areas of focus, selected work, and contact links.
+- [Eigen voice isolation](https://aaryanmishra.com/voice-isolation/index.md): Case study covering the production audio problem, Aaryan's contributions to Eigen's model runtime, developer platform, and SDK layer, and reported latency, usage, and word-error-rate results.
+- [Speech enhancement app](https://aaryanmishra.com/speech-app/index.md): Case study about an on-device Tauri application for live call enhancement, including deployment constraints, Aaryan's implementation, adoption, and reported conversion impact.
+
+## Supporting product context
+
+- [Eigen product documentation](https://www.arctan.ai/eigen/docs): Official SDK and integration documentation for the voice isolation system discussed in the portfolio.
+- [Arctan audio filter for Pipecat](https://docs.pipecat.ai/api-reference/server/services/audio-filters/arctan): Pipecat's integration reference for using Eigen in a real-time voice pipeline.
+- [Open ASR Leaderboard fork](https://github.com/arctan-ai/open_asr_leaderboard): Benchmark methodology referenced by the Eigen case study.
+
+## Optional
+
+- [GitHub](https://github.com/mshra): Aaryan's public code profile.
+- [LinkedIn](https://www.linkedin.com/in/callmeaaryan): Professional profile.
+- [X](https://x.com/callmeaaryan): Social profile.
+- [Email](mailto:aaryan.mshra@gmail.com): Direct contact.
